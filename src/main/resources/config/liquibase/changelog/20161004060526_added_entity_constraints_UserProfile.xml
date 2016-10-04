@@ -12,7 +12,7 @@
                                  baseTableName="user_profile"
                                  constraintName="fk_user_profile_user_id"
                                  referencedColumnNames="id"
-                                 referencedTableName="user"/>
+                                 referencedTableName="jhi_user"/>
 
     </changeSet>
 </databaseChangeLog>

@@ -1,0 +1,31 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "sonclass",
+            "otherEntityName": "son",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "teacherage"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "teacherName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "subjectHandle",
+            "fieldType": "String",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldName": "classId",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20161004091313",
+    "dto": "mapstruct",
+    "service": "serviceImpl",
+    "entityTableName": "teacher",
+    "pagination": "no"
+}
