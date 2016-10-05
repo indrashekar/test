@@ -5,14 +5,15 @@
         .module('test1App')
         .controller('SonDialogController', SonDialogController);
 
-    SonDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'Son'];
+    SonDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'Son', 'Standard'];
 
-    function SonDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, Son) {
+    function SonDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, Son, Standard) {
         var vm = this;
 
         vm.son = entity;
         vm.clear = clear;
         vm.save = save;
+        vm.standards = Standard.query();
 
         $timeout(function (){
             angular.element('.form-group:eq(1)>input').focus();

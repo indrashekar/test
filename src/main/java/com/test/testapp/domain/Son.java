@@ -39,6 +39,9 @@ public class Son implements Serializable {
     @Column(name = "mother_name")
     private String motherName;
 
+    @ManyToOne
+    private Standard standard;
+
     public Long getId() {
         return id;
     }
@@ -123,6 +126,19 @@ public class Son implements Serializable {
 
     public void setMotherName(String motherName) {
         this.motherName = motherName;
+    }
+
+    public Standard getStandard() {
+        return standard;
+    }
+
+    public Son standard(Standard standard) {
+        this.standard = standard;
+        return this;
+    }
+
+    public void setStandard(Standard standard) {
+        this.standard = standard;
     }
 
     @Override

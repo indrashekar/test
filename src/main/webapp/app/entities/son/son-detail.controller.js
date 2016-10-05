@@ -5,9 +5,9 @@
         .module('test1App')
         .controller('SonDetailController', SonDetailController);
 
-    SonDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'previousState', 'entity', 'Son'];
+    SonDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'previousState', 'entity', 'Son', 'Standard'];
 
-    function SonDetailController($scope, $rootScope, $stateParams, previousState, entity, Son) {
+    function SonDetailController($scope, $rootScope, $stateParams, previousState, entity, Son, Standard) {
         var vm = this;
 
         vm.son = entity;
