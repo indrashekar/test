@@ -1,0 +1,23 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "motherName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "motherAge",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "address",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20161005114721",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "grand_mother",
+    "pagination": "no"
+}

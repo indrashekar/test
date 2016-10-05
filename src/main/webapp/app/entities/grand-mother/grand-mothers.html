@@ -1,0 +1,60 @@
+<div>
+    <h2>Grand Mothers</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="grand-mother.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span >
+                        Create new Grand Mother
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span>ID</span></th>
+                    <th><span>Mother Name</span></th>
+                    <th><span>Mother Age</span></th>
+                    <th><span>Address</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="grandMother in vm.grandMothers track by grandMother.id">
+                    <td><a ui-sref="grand-mother-detail({id:grandMother.id})">{{grandMother.id}}</a></td>
+                    <td>{{grandMother.motherName}}</td>
+                    <td>{{grandMother.motherAge}}</td>
+                    <td>{{grandMother.address}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="grand-mother-detail({id:grandMother.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="grand-mother.edit({id:grandMother.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="grand-mother.delete({id:grandMother.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
