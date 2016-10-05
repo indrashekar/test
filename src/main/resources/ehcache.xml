@@ -58,5 +58,9 @@
                                timeToLiveSeconds="3600">
                         </cache>
                         
+    <cache name="com.test.testapp.domain.Standard"
+                               timeToLiveSeconds="3600">
+                        </cache>
+                        
     <!-- jhipster-needle-ehcache-add-entry -->
 </ehcache>

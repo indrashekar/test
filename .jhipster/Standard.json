@@ -1,0 +1,19 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "standard",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "division",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20161005100928",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "standard",
+    "pagination": "no"
+}
