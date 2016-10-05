@@ -50,6 +50,8 @@ public class SonResourceIntTest {
     private static final String UPDATED_ADDRESS = "BBBBB";
     private static final String DEFAULT_FATHER_NAME = "AAAAA";
     private static final String UPDATED_FATHER_NAME = "BBBBB";
+    private static final String DEFAULT_MOTHER_NAME = "AAAAA";
+    private static final String UPDATED_MOTHER_NAME = "BBBBB";
 
     @Inject
     private SonRepository sonRepository;
@@ -92,7 +94,8 @@ public class SonResourceIntTest {
                 .lastName(DEFAULT_LAST_NAME)
                 .age(DEFAULT_AGE)
                 .address(DEFAULT_ADDRESS)
-                .fatherName(DEFAULT_FATHER_NAME);
+                .fatherName(DEFAULT_FATHER_NAME)
+                .motherName(DEFAULT_MOTHER_NAME);
         return son;
     }
 
@@ -122,6 +125,7 @@ public class SonResourceIntTest {
         assertThat(testSon.getAge()).isEqualTo(DEFAULT_AGE);
         assertThat(testSon.getAddress()).isEqualTo(DEFAULT_ADDRESS);
         assertThat(testSon.getFatherName()).isEqualTo(DEFAULT_FATHER_NAME);
+        assertThat(testSon.getMotherName()).isEqualTo(DEFAULT_MOTHER_NAME);
     }
 
     @Test
@@ -139,7 +143,8 @@ public class SonResourceIntTest {
                 .andExpect(jsonPath("$.[*].lastName").value(hasItem(DEFAULT_LAST_NAME.toString())))
                 .andExpect(jsonPath("$.[*].age").value(hasItem(DEFAULT_AGE)))
                 .andExpect(jsonPath("$.[*].address").value(hasItem(DEFAULT_ADDRESS.toString())))
-                .andExpect(jsonPath("$.[*].fatherName").value(hasItem(DEFAULT_FATHER_NAME.toString())));
+                .andExpect(jsonPath("$.[*].fatherName").value(hasItem(DEFAULT_FATHER_NAME.toString())))
+                .andExpect(jsonPath("$.[*].motherName").value(hasItem(DEFAULT_MOTHER_NAME.toString())));
     }
 
     @Test
@@ -157,7 +162,8 @@ public class SonResourceIntTest {
             .andExpect(jsonPath("$.lastName").value(DEFAULT_LAST_NAME.toString()))
             .andExpect(jsonPath("$.age").value(DEFAULT_AGE))
             .andExpect(jsonPath("$.address").value(DEFAULT_ADDRESS.toString()))
-            .andExpect(jsonPath("$.fatherName").value(DEFAULT_FATHER_NAME.toString()));
+            .andExpect(jsonPath("$.fatherName").value(DEFAULT_FATHER_NAME.toString()))
+            .andExpect(jsonPath("$.motherName").value(DEFAULT_MOTHER_NAME.toString()));
     }
 
     @Test
@@ -183,7 +189,8 @@ public class SonResourceIntTest {
                 .lastName(UPDATED_LAST_NAME)
                 .age(UPDATED_AGE)
                 .address(UPDATED_ADDRESS)
-                .fatherName(UPDATED_FATHER_NAME);
+                .fatherName(UPDATED_FATHER_NAME)
+                .motherName(UPDATED_MOTHER_NAME);
 
         restSonMockMvc.perform(put("/api/sons")
                 .contentType(TestUtil.APPLICATION_JSON_UTF8)
@@ -199,6 +206,7 @@ public class SonResourceIntTest {
         assertThat(testSon.getAge()).isEqualTo(UPDATED_AGE);
         assertThat(testSon.getAddress()).isEqualTo(UPDATED_ADDRESS);
         assertThat(testSon.getFatherName()).isEqualTo(UPDATED_FATHER_NAME);
+        assertThat(testSon.getMotherName()).isEqualTo(UPDATED_MOTHER_NAME);
     }
 
     @Test

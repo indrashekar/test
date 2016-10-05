@@ -36,6 +36,9 @@ public class Son implements Serializable {
     @Column(name = "father_name")
     private String fatherName;
 
+    @Column(name = "mother_name")
+    private String motherName;
+
     public Long getId() {
         return id;
     }
@@ -109,6 +112,19 @@ public class Son implements Serializable {
         this.fatherName = fatherName;
     }
 
+    public String getMotherName() {
+        return motherName;
+    }
+
+    public Son motherName(String motherName) {
+        this.motherName = motherName;
+        return this;
+    }
+
+    public void setMotherName(String motherName) {
+        this.motherName = motherName;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -138,6 +154,7 @@ public class Son implements Serializable {
             ", age='" + age + "'" +
             ", address='" + address + "'" +
             ", fatherName='" + fatherName + "'" +
+            ", motherName='" + motherName + "'" +
             '}';
     }
 }

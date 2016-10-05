@@ -68,7 +68,7 @@ class SonGatlingTest extends Simulation {
             .exec(http("Create new son")
             .post("/api/sons")
             .headers(headers_http_authenticated)
-            .body(StringBody("""{"id":null, "fisrtName":"SAMPLE_TEXT", "lastName":"SAMPLE_TEXT", "age":"0", "address":"SAMPLE_TEXT", "fatherName":"SAMPLE_TEXT"}""")).asJSON
+            .body(StringBody("""{"id":null, "fisrtName":"SAMPLE_TEXT", "lastName":"SAMPLE_TEXT", "age":"0", "address":"SAMPLE_TEXT", "fatherName":"SAMPLE_TEXT", "motherName":"SAMPLE_TEXT"}""")).asJSON
             .check(status.is(201))
             .check(headerRegex("Location", "(.*)").saveAs("new_son_url"))).exitHereIfFailed
             .pause(10)

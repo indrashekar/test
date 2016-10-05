@@ -21,6 +21,10 @@
         {
             "fieldName": "fatherName",
             "fieldType": "String"
+        },
+        {
+            "fieldName": "motherName",
+            "fieldType": "String"
         }
     ],
     "changelogDate": "20161004063155",
