@@ -33,6 +33,9 @@ public class Son implements Serializable {
     @Column(name = "address")
     private String address;
 
+    @Column(name = "father_name")
+    private String fatherName;
+
     public Long getId() {
         return id;
     }
@@ -93,6 +96,19 @@ public class Son implements Serializable {
         this.address = address;
     }
 
+    public String getFatherName() {
+        return fatherName;
+    }
+
+    public Son fatherName(String fatherName) {
+        this.fatherName = fatherName;
+        return this;
+    }
+
+    public void setFatherName(String fatherName) {
+        this.fatherName = fatherName;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -121,6 +137,7 @@ public class Son implements Serializable {
             ", lastName='" + lastName + "'" +
             ", age='" + age + "'" +
             ", address='" + address + "'" +
+            ", fatherName='" + fatherName + "'" +
             '}';
     }
 }

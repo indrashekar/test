@@ -17,6 +17,10 @@
         {
             "fieldName": "address",
             "fieldType": "String"
+        },
+        {
+            "fieldName": "fatherName",
+            "fieldType": "String"
         }
     ],
     "changelogDate": "20161004063155",
